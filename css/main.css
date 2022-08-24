@@ -267,7 +267,64 @@ FAQ Page
 .faq-content{
   margin-bottom:50px;
 }
+/*==================================================================
+========================Tablet and Desktop Breakpoints============*/
 
+@media only screen and (min-width:768px){
+  /*Tablets Styles Here*/
+  header{
+    
+  }
+  header .content-wrapper{
+
+  }
+  header nav ul{
+
+  }
+  aside .content-wrapper{
+
+  }
+  .features .article{
+
+  }
+  .reviews .article{
+
+  }
+  .footer-content{
+
+  }
+  /*About Page Tablets*/
+  .mission-content {
+    display:;
+    justify-content: space-between;
+    align-items: ;
+  }
+  .mission-content p{
+    width:;
+  }
+  .contact-section .content-wrapper h2{
+    width: ;
+  }
+  .contact-content{
+    display:;
+    justify-content: ;
+    align-items: ;
+  }
+  /*FAQ Tablet Styles*/
+  .faq .content-wrapper{
+    justify-content: space-between;
+  }
+  .faq-content{
+    flex-basis: 40%;
+  }
+  .faq h2{
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width:1200px){
+  /*Desktop Styles Here*/
+}
 
 /* ==========================================================================
    Helper classes
@@ -356,7 +413,107 @@ FAQ Page
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+/*==================================================================
+========================Tablet and Desktop Breakpoints============*/
 
+@media only screen and (min-width:768px){
+  /*Tablets Styles Here*/
+  .content-wrapper{
+    max-width: 640px;
+    margin:100px 0;
+  }
+  header{
+    justify-content: space-around;
+    padding: 33px 0;
+  }
+  header .content-wrapper{
+    width:100%;
+    justify-content: space-between;
+  }
+  header nav{
+    width:20%;
+  }
+  header nav ul{
+    justify-content: space-between;
+  }
+  .header-divider{
+    display: none;
+  }
+
+  aside .content-wrapper{
+    margin: 50px 0;
+    display:flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+  }
+  aside .content-wrapper .form-description, aside .content-wrapper .form{
+    width: 40%;
+    margin:0;
+  }
+  .features article{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    flex-basis: 50%;
+  }
+  .features .features-item-description{
+    width: 50%;
+  }
+  .reviews article{
+    display: flex;
+    justify-content: space-between;
+  }
+  .reviews article div{
+    width:49%;
+  }
+  .footer .content-wrapper{
+    width: 65%;
+    margin:100px 0;
+  }
+  .footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  footer .contact{
+    margin-bottom: 0;
+  }
+  .footer .copyright{
+    width:100%;
+  }
+  /*About Page Tablets*/
+  .mission-content {
+    display:;
+    justify-content: space-between;
+    align-items: ;
+  }
+  .mission-content p{
+    width:;
+  }
+  .contact-section .content-wrapper h2{
+    width: ;
+  }
+  .contact-content{
+    display:;
+    justify-content: ;
+    align-items: ;
+  }
+  /*FAQ Tablet Styles*/
+  .faq .content-wrapper{
+    justify-content: space-between;
+  }
+  .faq-content{
+    flex-basis: 40%;
+  }
+  .faq h2{
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width:1200px){
+  /*Desktop Styles Here*/
+}
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */
 }
