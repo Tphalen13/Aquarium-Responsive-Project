@@ -89,6 +89,7 @@ textarea {
 
 /*General Styles*/
 html{
+  background-color: #527158;
   color: #222;
   font-size: 1em;
   line-height: 1.4;
@@ -149,13 +150,12 @@ address{
    }
    
    header .content-wrapper {
-    display: flex;
      margin: 0;
      
    }
    
    header figure {
-     width: 50%;
+     width:50%;
      display: flex;
      justify-content: center;
      align-items: center;
@@ -169,7 +169,7 @@ address{
   }
   
   header nav {
-    width: 80%;
+    width: 50%;
     font-size: 1.25em;
     font-weight: 700;
     text-transform: uppercase;
@@ -180,12 +180,13 @@ address{
   }
   
   header nav ul {
-    width: 100%;
     display: flex;
     justify-content: space-around;
+    margin-left: 60%;
   }
   header nav ul li {
     font-size: 1.125em;
+    padding: 2%;
   }
      
    footer {
@@ -246,8 +247,8 @@ address{
   flex-flow: row wrap;
   background-image: url(../img/heroimage.jpg);
   background-size: cover;
-  background-clip: border-box;
-  height:48vh;
+  background-position: center;
+  min-height: 500px;
 }
 img{
   width:100%;
@@ -261,17 +262,14 @@ img{
   flex-flow: row wrap;
   
 }
-.hero-area, h1{
+.hero-area h1{
   display: flex;
-  justify-content: left;
-  align-items: left;
   flex-flow: row wrap;
   width: 80%;
-  font-size: 1.5em;
-  font-weight: 500;
-  position: absolute;
-  top: 14%;
-  left: 5%;
+  font-size: 2.25em;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif; 
+  font-weight: 500; 
+  line-height: 1.2; 
 }
 
 
@@ -291,17 +289,17 @@ aside .form {
 }
 /*Form*/
 .content-wrapper-form{
-  display: flex;
   margin-top: 1%;
   margin-bottom: 1%;
   justify-content: center;
   align-items: center;
 }
 .description-form{
+  flex: 1;
   justify-content: center;
   align-items: center;
   margin-left: 10%;
-  width: 40%;
+ 
 }
 .description-form h2{
   width: 80%;
@@ -315,7 +313,8 @@ aside .form {
   margin-top: 0%;
 }
 .form{
-  width:25%;
+  flex: 1;
+  margin-left: 10%;
   justify-content: left;
   padding-bottom: 2%;
   margin-right: 10%;
@@ -386,50 +385,21 @@ input[type="button"] {
   width: 70%;
 }
 /*Reviews*/
-.reviews{
+.reviews {
   background-color: #2a423a;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
-  width: 100%;
 }
-.reviews .content-wrapper{
-  width: 100%;
-  padding-left: 2%;
-}
-.reviews h2{
+
+.reviews h2 {
   margin-bottom: 40px;
-  line-height: 1.25em;
-  font-size: 2em;
+  line-height: 1;
+}
+
+.reviews h3 {
+  width: 55%;
   margin: 20px 0;
-  margin-left: 4%;
-}
-.lacrue{
-  display: flex;
-  justify-content: center;
-  flex-flow: row wrap;
-  width: 100%;
-}
-.lacrue figure{
-  width: 80%;
-  padding: 0%;
-}
- figure img{
-  width: 22em;
- padding-left: 0%;
-}
-.lacrue .team-description{
-  flex: 2;
-  position: absolute;
-  margin-left: 70%;
-  width: 28%;
-  
-}
-.lacrue .team-description h3{
-  font-size: 1.75rem;
-}
-.lacrue .team-description p{
- justify-content: center;
 }
 /*===============================================================================================
 About Page
@@ -500,62 +470,6 @@ FAQ Page
 }
 /*==================================================================
 ========================Tablet and Desktop Breakpoints============*/
-
-@media only screen and (min-width:768px){
-  /*Tablets Styles Here*/
-  header{
-    
-  }
-  header .content-wrapper{
-
-  }
-  header nav ul{
-
-  }
-  aside .content-wrapper{
-
-  }
-  .features .article{
-
-  }
-  .reviews .article{
-
-  }
-  .footer-content{
-
-  }
-  /*About Page Tablets*/
-  .mission-content {
-    display:;
-    justify-content: space-between;
-    align-items: ;
-  }
-  .mission-content p{
-    width:;
-  }
-  .contact-section .content-wrapper h2{
-    width: ;
-  }
-  .contact-content{
-    display:;
-    justify-content: ;
-    align-items: ;
-  }
-  /*FAQ Tablet Styles*/
-  .faq .content-wrapper{
-    justify-content: space-between;
-  }
-  .faq-content{
-    flex-basis: 40%;
-  }
-  .faq h2{
-    width: 100%;
-  }
-}
-
-@media only screen and (min-width:1200px){
-  /*Desktop Styles Here*/
-}
 
 /* ==========================================================================
    Helper classes
@@ -774,6 +688,8 @@ FAQ Page
 
   footer .contact {
     margin-bottom: 0;
+    padding-right: 100%;
+    margin-left: 10%;
   }
 
   footer h4 {
@@ -858,6 +774,10 @@ FAQ Page
 
   .content-wrapper {
     max-width: 960px;
+    display: flex;
+  }
+  header .content-wrapper nav ul li{
+    margin:8%;
   }
 
   h2 {
@@ -890,12 +810,18 @@ FAQ Page
     width: 30%;
   }
 
-  .form-description p {
+  .description-form p {
     font-size: 1.125em;
+  }
+  .content-wrapper-form{
+    display: flex;
   }
 
   /* Features */
-
+  .features .content-wrapper{
+    display: flex;
+    flex-direction: column;
+  }
   .features h2 {
     width: 90%;
   }
@@ -906,11 +832,15 @@ FAQ Page
   
   /* Reviews */
   
-  .reviews h2 {
+  .reviews .content-wrapper{
+    display: flex;
+    flex-direction: column;
+  }
+  .reviews .content-wrapper h2 {
     padding-bottom: 50px; 
   }
   
-  .reviews article div {
+  .reviews .content-wrapper article div {
     width: 42%;
   }
 
